@@ -32,7 +32,6 @@ some_float_div = 10 / 3
 # Python is respectable, it doesn't claim that this is infinity:
 # 1/0
 
-
 # Booleans (this will trip you up, it still gets me)
 some_bool = True
 some_bool = False
@@ -111,3 +110,15 @@ some_lambda = lambda x: print(x)
 
 def some_other_func(x):
     print(x)
+
+a = {"a": 1}
+b = {"a": 1}
+
+if a == b:
+    print("These are equal")
+
+if a is b:
+    print("But these are not identical")
+
+print(id(a))
+print(id(b))
