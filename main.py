@@ -3,7 +3,7 @@ We can either use multiline strings for comments,
 or the pound sign/octothorpe (#) for them.
 """
 import math
-from itertools import chain
+from itertools import chain, permutations, pairwise
 from fractions import Fraction
 
 # let someVariable = "some value"
@@ -31,6 +31,13 @@ some_float_div = 10 / 3
 
 # Python is respectable, it doesn't claim that this is infinity:
 # 1/0
+
+# try:
+    # 1/0
+    # some_dict = {"a":0}
+    # some_dict["b"]
+# except ZeroDivisionError as e:
+#     print(e)
 
 # Booleans (this will trip you up, it still gets me)
 some_bool = True
@@ -71,6 +78,12 @@ some_iterable = ["Un", "Deux", "Trois", "Cat", "Sank", "Oiseaux"]
 # for word in some_iterable:
 #     print(word)
 
+# for i in range(len(some_iterable)):
+#     print(i, some_iterable[i])
+
+# for idx, value in enumerate(some_iterable):
+#     print(idx, value)
+
 # some_exit_val = True
 
 # while some_exit_val:
@@ -94,6 +107,7 @@ def some_function(*args, **kwargs):
     """
     print(args)
     print(kwargs)
+    return "This is a weird warning."
 
 # some_function(4, 5, 6, a=1, b=2, c=3)
 
@@ -120,5 +134,5 @@ if a == b:
 if a is b:
     print("But these are not identical")
 
-print(id(a))
-print(id(b))
+print("a:", id(a))
+print("b:", id(b))
